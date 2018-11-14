@@ -121,7 +121,7 @@ a {
 }
 .pro-skill {
   position: relative;
-  min-height: 260px;
+  min-height: 280px;
 }
 .pro-skill .icon {
   background: url('../image/pro_skill_icon.png') no-repeat;
