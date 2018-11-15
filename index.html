@@ -85,21 +85,50 @@
                 <h2>北京乔松健康网络科技有限公司（保定）（2016年1月-2017年6月）</h2>
                 <span class="project-title">乔松健康管家、一划赚等项目</span>
                 <span class="tools">开发工具： 无 </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    该项目的主要功能是为独守或者短时间无法照顾的老人提供健康数据的收集，老人透过每日的设备检测将体检数据发送到云平台上，
+                    通过分析得出老人的健康报告，定时定期发送给子女手机上，另外子女可以通过云监控及时的查看老人的当前状态。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
                 <span class="project-intro">
                     在此项目中我主要负责项目的运维工作，主要是对软件运行过程中出现的问题做及时的记录，并反馈结果给开发人员。
                     这些项目中，我主要学习了软件的运作流程，自己在空闲的时候看一些编程类的书籍，这段时间成长特别快，得到了领导的表扬。
                 </span>
                 <span class="project-title">大润发e路通数据抽取（app）</span>
                 <span class="tools">开发工具： python + requests + fiddle </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
                 <span class="project-intro">
-                    该项目的主要目的是抓取app上面的关于健康类商品的价格，以便于给客户推送价格合理价格的代理产品，技术点主要是使用fiddle
-                    抓取app的数据包，数据包的逻辑分析，模仿app请求的数据伪造，利用postman软件对伪造请求进行测试。对服务器返回响应的解析和存储，难点主要在于在于获得响应
-                    数据之后如何构造下一次请求，对响应数据的清洗及入库。
-                    <br>项目地址：<a href="#" style="color: blue">www</a>以对公司源码保密为原则只提供部分代码
+                    该项目的主要目的是抓取app上面的关于健康类商品的价格，以便于给客户推送价格合理价格的代理产品。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.使用fiddle抓取app的数据包；<br>
+                    <span style="text-indent: 2em">2.json数据包的逻辑分析；</span>
+                    <span style="text-indent: 2em">3.模仿app请求的数据伪造；</span>
+                    <span style="text-indent: 2em">4.利用postman软件对伪造请求进行测试；</span>
+                    <span style="text-indent: 2em">5.使用python-requests对伪造请求进行；</span>
+                    <span style="text-indent: 2em">6.对服务器返回响应的清洗和存储；</span>
+                    <span style="text-indent: 2em">难点主要在于该软件的响应数据使用的是POST的raw数据，这种请求方式在scrapy中难以实现，只能通过requests获得响应数据
+                    然后构造下一次请求，对响应数据的清洗及入库。</span>
+                    <span style="text-indent: 2em">项目地址：<a href="#" style="color: blue">www</a>以对公司源码保密为原则只提供部分代码</span>
+
                 </span>
                 <span class="project-title">AQI天气数据抽取</span>
                 <span class="tools">开发工具： python + scrapy + scrapy_redis </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
                 <span class="project-intro">
+                    该项目的主要目的是获得天气详情，将数据存储到本地数据库当中，最后更新到云平台中，用户可以在用户中心查看本地的污染情况
+                    曲线，根据天气情况给用户发送一些提示性的短信。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.对网站的HTML进行代码分析；<br>
+                    <span style="text-indent: 2em">2.确定xpath的数据抽取规则；</span>
+                    <span style="text-indent: 2em">3.模仿app请求的数据伪造；</span>
+                    <span style="text-indent: 2em">4.利用postman软件对伪造请求进行测试；</span>
+                    <span style="text-indent: 2em">5.使用python-requests对伪造请求进行；</span>
+                    <span style="text-indent: 2em">6.对服务器返回响应的清洗和存储；</span>
                     该项目的主要目的是获得天气详情，将数据同步更新到云平台中，该项目的技术点主要HTML分析，AQI数据获取。难点主要是
                     使用CrawlSpider提取页面的所有链接，xpath规则书写，在中间件中使用selenium解决关键数据的动态加载问题，
                     scrapy-redis的部署。
@@ -111,12 +140,14 @@
                 <h2>石家庄科林电气股份有限公司（2017年8月）</h2>
                 <span class="project-title">用电信息云平台</span>
                 <span class="tools">开发工具： pycharm + Django </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
                 <span class="project-intro">
                     该项目主要是开发的主要目的是为用户提供一个便捷的用电信息查看、快捷缴费、用电历史纪录、每月用电量曲线图（互联网+）。
                     我在此项目主要负责了用户注册，登录，密码的重置，QQ、微信等第三方登录，本项目的技术点是图片验证码部分使用的是一个
                     第三方包（基于pillow）,注册通过手机号注册（使用阿里云短信库），手机号验证码存储到redis中。QQ、微信主要涉及的是
                     OAuth认证。除此之外还参与了用户中心的编写，技术点包括用户权限的验证，用电信息的反馈，基本信息的展示等等，
                 </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
             </div>
         </div>
     </div>
@@ -130,7 +161,7 @@
                 <li>
                     <span class="source-name">项目名称：M-blog</span><br>
                     <span>一款使用python + flask写的应用博客系统，使用MyBatis作为ORM框架，写作语法支持python3。</span>
-                    <span class="source-url">源代码地址：<a href="#">www.xxxxxx.com</a></span>
+                    <span class="source-url">源代码地址：<a href="#" style="color: blue">www.xxxxxx.com</a></span>
                 </li>
             </ul>
         </div>
