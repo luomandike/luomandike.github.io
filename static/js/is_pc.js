@@ -24,7 +24,7 @@ function browserRedirect() {
 
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
 
-        alert("感谢你查看我的简历，本页面在PC端效果更好")
+        alert("感谢您查看我的简历，本页面在PC端效果更好")
 
     } else {
 
