@@ -1,0 +1,28 @@
+{% extends "/news/base.html" %}
+{% block title %}用户中心{% endblock %}
+{% block script %}<script type="text/javascript" src="../../static/news/js/jquery.form.min.js"></script><script type="text/javascript" src="../../static/news/js/user_pic_info.js"></script>{% endblock %}
+{% block category %}{% endblock %}
+{% block content %}
+<div class="conter_con">
+		<div class="user_menu_con fl">
+			<div class="user_center_pic">
+				<img src="{{ data.user.avatar_url }}" alt="用户图片">
+			</div>
+			<div class="user_center_name">用户:{{ data.user.nick_name }}</div>
+
+			<ul class="option_list">
+				<li class="active"><a href="/profile/user_base_info" target="main_frame">基本资料</a></li>
+				<li><a href="/profile/user_pic_info" target="main_frame">头像设置</a></li>
+				<li><a href="/profile/user_follow" target="main_frame">我的关注</a></li>
+				<li><a href="/profile/user_pass_info" target="main_frame">密码修改</a></li>
+				<li><a href="/profile/user_collection" target="main_frame">我的收藏</a></li>
+				<li><a href="/profile/user_news_release" target="main_frame">新闻发布</a></li>
+				<li><a href="user_news_list.html" target="main_frame">新闻列表</a></li>
+			</ul>
+		</div>
+
+		<div class="user_con fr">
+			<iframe src="/profile/user_base_info" frameborder="0" name="main_frame" class="main_frame" id="main_frame"></iframe>
+		</div>
+</div>
+{% endblock %}
