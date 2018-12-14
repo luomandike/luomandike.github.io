@@ -92,12 +92,12 @@
                 <h4 style="margin: 2px auto 2px">项目职责：</h4>
                 <span class="project-intro">
                     1.采用前后端分离的技术，后端接口使用DRF框架构建，前端采用模板继承的方法, 我主要负责后端接口的书写；<br>
-                    <span style="text-indent: 2em">2.负责MVT中的view编写，，操作数据库模型model获取数据库中的数据，将数据库中的模型
+                    <span style="text-indent: 2em">2.负责MVT中的view编写，操作数据库模型model获取数据库中的数据，将数据库中的模型
                         渲染到templates，将渲染好的templates返回给用户（历史纪录使用的是静态页面,通过django-crontab扩展完成定时生成
                         静态页面的功能）。</span>
                     <span style="text-indent: 2em">3.完成第三方支付功能，支付宝支付的功能。</span>
                     <span style="text-indent: 2em">4.邮件功能，月末将本月的电费使用情况以及每日的用电量信息发送到邮件中，
-                        先有序列化器将数据查询出来，然后通过celery将信息发送邮箱中。</span>
+                        先用序列化器将数据查询出来，然后通过celery将信息发送到邮箱中。</span>
                     <span style="text-indent: 2em">5.使用Django REST framework，完成数据的序列化操作，</span>
                     <span style="text-indent: 2em">6.书写接口api文档，指定符合RESTful风格url匹配规则。</span>
                 </span>
@@ -138,7 +138,7 @@
                     <span style="text-indent: 2em">4.产品价格通过另外的api实现，将不超过二十个产品的id构造新的请求，将返回的价格
                         通过id匹配存入数据库。</span>
                     <span style="text-indent: 2em">5.通过item将数据传递给pipeline将数据进行数据持久化保存。</span>
-                    <span style="text-indent: 2em">难点反反爬操作，主要构建User-Agent池，ip池，解决常见的反爬策略。</span>
+                    <span style="text-indent: 2em">难点是反反爬操作，主要构建User-Agent池，ip池，解决常见的反爬策略。</span>
                 </span>
                 <span class="project-title">自媒体文章抽取（app）</span>
                 <span class="tools">开发工具： python + requests + fiddle </span>
