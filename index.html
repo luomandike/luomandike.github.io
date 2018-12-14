@@ -29,7 +29,7 @@
             </div>
             <div class="header-right">
                 <ul>
-                    <li>期望职位： python爬虫工程师，大数据工程师</li>
+                    <li>期望职位： python后端开发工程师</li>
                     <li>期望城市： 北京，石家庄</li>
                     <li>当前坐标： 北京</li>
                 </ul>
@@ -64,11 +64,11 @@
         <div class="detail-list">
             <ul>
                 <li>前端： Javascript(熟悉)/JQuery(熟悉)/Vue(熟悉)/css(熟悉)/html(熟悉)</li>
-                <li>后端： Flask(熟悉)/Django(熟悉)</li>
-                <li>爬虫： Scrapy(熟练)/python_requests(熟练)/熟练scrapy-redis分布式爬虫</li>
-                <li>数据清洗： xpath(熟练)/lxml(熟练)/bs4(熟练)/Regex(熟练)/json(熟练)</li>
+                <li style="color: red; font-size: large">后端： Flask(熟练)/Django(熟练)</li>
+                <li>爬虫： Scrapy(熟悉)/python_requests(熟悉)</li>
+                <li>数据清洗： xpath(熟悉)/lxml(熟悉)/bs4(熟悉)/Regex(熟悉)/json(熟悉)</li>
                 <li>数据库： MySQL(熟练)/redis(熟练)/sqlite(熟练)</li>
-                <li>解决网页动态加载：熟练使用Selenium实施动态HTML抓取</li>
+                <!--<li>解决网页动态加载：熟练使用Selenium实施动态HTML抓取</li>-->
                 <li>服务器相关： 熟悉Linux基本命令/了解docker基本操作</li>
                 <li>版本控制软件： 熟练使用git/svn等源代码版本控制工具</li>
                 <li>常用软件： fiddle、wireshark、pycharm、jupyter notebook、sublime</li>
@@ -91,15 +91,72 @@
                 </span>
                 <h4 style="margin: 2px auto 2px">项目职责：</h4>
                 <span class="project-intro">
-                    1.采用前后端分离的技术，后端接口使用DRF框架构建，前端采用模板继承的方法；<br>
-                    <span style="text-indent: 2em">2.我在此项目主要负责了用户注册，登录，密码的重置，QQ、微信等第三方登录
-                    ，本项目的技术点是图片验证码部分使用的是一个
-                    第三方包（基于pillow）,注册通过celery任务队列将验证码发送到手机号注册（使用阿里云短信库），手机号验证码存储到redis中。QQ、微信主要涉及的是
-                    OAuth认证，除此之外还参与了用户中心的编写，技术点包括用户权限的验证，用电信息的提醒使用邮箱和短信(celery任务队列)，基本信息的展示等等，</span>
+                    1.采用前后端分离的技术，后端接口使用DRF框架构建，前端采用模板继承的方法, 我主要负责后端接口的书写；<br>
+                    <span style="text-indent: 2em">2.负责MVT中的view编写，，操作数据库模型model获取数据库中的数据，将数据库中的模型
+                        渲染到templates，将渲染好的templates返回给用户（历史纪录使用的是静态页面,通过django-crontab扩展完成定时生成
+                        静态页面的功能）。</span>
+                    <span style="text-indent: 2em">3.完成第三方支付功能，支付宝支付的功能。</span>
+                    <span style="text-indent: 2em">4.邮件功能，月末将本月的电费使用情况以及每日的用电量信息发送到邮件中，
+                        先有序列化器将数据查询出来，然后通过celery将信息发送邮箱中。</span>
+                    <span style="text-indent: 2em">5.使用Django REST framework，完成数据的序列化操作，</span>
+                    <span style="text-indent: 2em">6.书写接口api文档，指定符合RESTful风格url匹配规则。</span>
                 </span>
             </div>
             <div class="company">
                 <h2>北京乔松健康网络科技有限公司（保定）（2016年1月-2017年6月）</h2>
+                <span class="project-title">乔松商城</span>
+                <span class="tools">开发工具： python + Django </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    采用B2C的商业模式，主要是卖一些推荐的健康产品，一部分为自主产品，另一部分为淘宝商城的产品。通过向用户推送健康类文章，
+                    导购至商城，通过出售相关产品获取相应的利润。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.负责商城的用户注册，登录，密码的重置，第三方登录；<br>
+                    <span style="text-indent: 2em">2.redis保存验证码，手机短信码；</span>
+                    <span style="text-indent: 2em">3.个人中心页的实现主要是ajax+api实现；</span>
+                    <span style="text-indent: 2em">4.负责前端代码的模板抽取；</span>
+                    <span style="text-indent: 2em">5.负责大部分View的编写，使用restframework将数据生成固定的json格式；</span>
+                    <span style="text-indent: 2em">6.通过django-crontab扩展完成定时生成静态页面的功能，实现了首页静态化；</span>
+                    <span style="text-indent: 2em">难点主要是前端代码的抽取和渲染，首先理解前端代码逻辑然后对前端代码进行抽取，通过
+                        jijia2语法在对应位置设置相关变量，在定时静态化时按照相应的数据格式进行网页静态化渲染的功能。</span>
+                </span>
+                <span class="project-title">京东商城爬取</span>
+                <span class="tools">开发工具： python + scrapy + 网页调试工具 + postman </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    将网上商城的相关健康商品信息抽取并清洗，然后经过固定的算法将产品价格进行修改增加入产品数据库，为产品商城做商品数据
+                    支撑。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.对商品分类页进行页面分析；<br>
+                    <span style="text-indent: 2em">2.商品浏览器页的翻页请求处理；</span>
+                    <span style="text-indent: 2em">3.使用scrapy-parse对响应解析，对商品详情的数据抽取，
+                        使用lxml的etree模块通过xpath规则对数据进行抽取；</span>
+                    <span style="text-indent: 2em">4.产品价格通过另外的api实现，将不超过二十个产品的id构造新的请求，将返回的价格
+                        通过id匹配存入数据库。</span>
+                    <span style="text-indent: 2em">5.通过item将数据传递给pipeline将数据进行数据持久化保存。</span>
+                    <span style="text-indent: 2em">难点反反爬操作，主要构建User-Agent池，ip池，解决常见的反爬策略。</span>
+                </span>
+                <span class="project-title">自媒体文章抽取（app）</span>
+                <span class="tools">开发工具： python + requests + fiddle </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    该项目的主要目的是自媒体软件上的健康类视频文件和健康类文章，将爬下的文章经过清洗，定时的向用户推送。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.使用fiddle抓取app的数据包；<br>
+                    <span style="text-indent: 2em">2.json数据包的逻辑分析；</span>
+                    <span style="text-indent: 2em">3.模仿app请求的数据伪造；</span>
+                    <span style="text-indent: 2em">4.利用postman软件对伪造请求进行测试；</span>
+                    <span style="text-indent: 2em">5.使用python-requests对伪造请求进行；</span>
+                    <span style="text-indent: 2em">6.对服务器返回响应的清洗和存储；</span>
+                    <span style="text-indent: 2em">难点自媒体文章的抽取，在经过一定的规则抽取后，经常出现错版的现象，主要的解决方案
+                        还是通过人工审核的方式解决。</span>
+                </span>
                 <span class="project-title">乔松健康管家、一划赚等项目</span>
                 <span class="tools">开发工具： 无 </span>
                 <h4 style="margin: 2px auto 2px">项目描述：</h4>
@@ -111,41 +168,6 @@
                 <span class="project-intro">
                     在此项目中我主要负责项目的运维工作，主要是对软件运行过程中出现的问题做及时的记录，并反馈结果给开发人员。
                     这些项目中，我主要学习了软件的运作流程，自己在空闲的时候看一些编程类的书籍，这段时间成长特别快，得到了领导的表扬。
-                </span>
-                <span class="project-title">大润发e路通数据抽取（app）</span>
-                <span class="tools">开发工具： python + requests + fiddle </span>
-                <h4 style="margin: 2px auto 2px">项目描述：</h4>
-                <span class="project-intro">
-                    该项目的主要目的是抓取app上面的关于健康类商品的价格，以便于给客户推送价格合理价格的代理产品。
-                </span>
-                <h4 style="margin: 2px auto 2px">项目职责：</h4>
-                <span class="project-intro">
-                    1.使用fiddle抓取app的数据包；<br>
-                    <span style="text-indent: 2em">2.json数据包的逻辑分析；</span>
-                    <span style="text-indent: 2em">3.模仿app请求的数据伪造；</span>
-                    <span style="text-indent: 2em">4.利用postman软件对伪造请求进行测试；</span>
-                    <span style="text-indent: 2em">5.使用python-requests对伪造请求进行；</span>
-                    <span style="text-indent: 2em">6.对服务器返回响应的清洗和存储；</span>
-                    <span style="text-indent: 2em">难点主要在于该软件的响应数据使用的是POST的raw数据，这种请求方式在scrapy中难以实现，只能通过requests获得响应数据
-                    然后构造下一次请求，对响应数据的清洗及入库。</span>
-                </span>
-                <span class="project-title">AQI天气数据抽取</span>
-                <span class="tools">开发工具： python + scrapy + scrapy_redis </span>
-                <h4 style="margin: 2px auto 2px">项目描述：</h4>
-                <span class="project-intro">
-                    该项目的主要目的是获得天气详情，将数据存储到本地数据库当中，最后更新到云平台中，用户可以在用户中心查看本地的污染情况
-                    曲线，根据天气情况给用户发送一些提示性的短信。
-                </span>
-                <h4 style="margin: 2px auto 2px">项目职责：</h4>
-                <span class="project-intro">
-                    1.对网站的HTML进行代码分析；<br>
-                    <span style="text-indent: 2em">2.确定xpath的数据抽取规则；</span>
-                    <span style="text-indent: 2em">3.使用CrawlSpider提取页面的所有链接；</span>
-                    <span style="text-indent: 2em">4.使用selenium解决网站的动态加载问题；</span>
-                    <span style="text-indent: 2em">5.scrapy-redis分布式爬虫的部署；</span>
-                    <span style="text-indent: 2em">6.对服务器返回响应的清洗和存储；</span>
-                    <span style="text-indent: 2em">难点主要是使用CrawlSpider提取页面的所有链接，xpath规则书写，在中间件中使用selenium解决关键数据的动态加载问题，
-                    scrapy-redis的部署。</span>
                 </span>
             </div>
         </div>

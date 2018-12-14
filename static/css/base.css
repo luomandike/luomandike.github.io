@@ -121,7 +121,7 @@ a {
 }
 .pro-skill {
   position: relative;
-  min-height: 280px;
+  min-height: 260px;
 }
 .pro-skill .icon {
   background: url('../image/pro_skill_icon.png') no-repeat;
@@ -132,7 +132,7 @@ a {
 }
 .work-experience {
   position: relative;
-  min-height: 1500px;
+  min-height: 2000px;
 }
 .work-experience .icon {
   background: url('../image/work_experience_icon.png') no-repeat;
