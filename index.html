@@ -45,8 +45,8 @@
         <div class="detail-list">
             <div class="info-left">
                 <span>性别： 男</span>
-                <span>年龄： 26</span>
-                <span>工作年限： 3年</span>
+                <span>年龄： 28</span>
+                <span>工作年限： 5年</span>
             </div>
             <div class="info-right">
                 <span>籍贯： 河北</span>
@@ -63,15 +63,16 @@
         <span class="long-line"></span>
         <div class="detail-list">
             <ul>
-                <li>前端： Javascript(熟悉)/JQuery(熟悉)/Vue(熟悉)/css(熟悉)/html(熟悉)</li>
-                <li style="color: red; font-size: large">后端： Flask(熟练)/Django(熟练)</li>
-                <li style="color: red; font-size: large">爬虫： Scrapy(熟练)/python_requests(熟练)</li>
+                <li style="color: red; font-size: large">前端： element-ui(熟练)/uni-app(熟悉)</li>
+                <li style="color: red; font-size: large">后端： Flask(熟练)/Django(熟练)/PyQt5(熟练)</li>
+                <li style="color: red; font-size: large">爬虫： Scrapy(熟练)/requests(熟练)</li>
+                <li style="color: red; font-size: large">数据处理： pandas(熟练)/numpy(熟练)/jqdata(熟练, 聚宽量化数据库)</li>
+                <li style="color: red; font-size: large">其他工具： photoshop(熟练,主要是前端psd文件切图)/vscode</li>
                 <li>数据清洗： xpath(熟悉)/lxml(熟悉)/bs4(熟悉)/Regex(熟悉)/json(熟悉)</li>
                 <li>数据库： MySQL(熟练)/redis(熟练)/sqlite(熟练)</li>
-                <li>解决网页动态加载：熟练使用Selenium实施动态HTML抓取</li>
                 <li>服务器相关： 熟悉Linux基本命令/了解docker基本操作</li>
                 <li>版本控制软件： 熟练使用git/svn等源代码版本控制工具</li>
-                <li>常用软件： fiddle、wireshark、pycharm、jupyter notebook、sublime</li>
+                <li>常用软件： charles、pycharm、jupyter notebook、vscode、sublime、聚宽量化数据库</li>
             </ul>
         </div>
     </div>
@@ -79,10 +80,96 @@
 
     <div class="work-experience">
         <span class="icon"></span>
-        <span class="subtitle">工作经历</span>
+        <span class="subtitle">工作经历(以下只是工作的一部分)</span>
         <span class="long-line"></span>
         <div class="detail-list">
             <div class="company">
+                <h2>河北汤鸿汇泰投资管理有限公司（2019年2月 - 至今）</h2>
+                <span class="project-title">金融数据爬虫</span>
+                <span class="tools">开发工具： pycharm + requests + scrapy </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    为了及时了解到二级市场数据的变化，需要从东方财富网，天天基金，choice及其他网站上获取每日的数据变化，东方财富网站主要是一些公开的股票信息，天天基金网是
+                    公开的基金数据，choice则包含一些付费模块，数据较为丰富，其中东方财富和天天基金主要是web端，choice为pc端，web端主要是通过chrome的调试获取数据
+                    API，PC端主要是通过charles获取数据API。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.通过requests、lxml，从网页和api中获取数据，通过xpath和json清洗数据，将数据整理为想要的字段；<br>
+                    <span style="text-indent: 2em">2.使用pandas对每日资金流向等数据汇总，通过dataframe.save将数据导出为excel，供研究员查看；</span>
+                    <span style="text-indent: 2em">3.通过SQL操作将数据存放到mysql数据库；</span>
+                    <span style="text-indent: 2em">4.通过talib、pandas编写回测策略，验证在历史上同样的操作收益、回撤、波动等，并绘制曲线；</span>
+                    <span style="text-indent: 2em">5.完成基金经理的一些交易想法，测试历史有效性，收益及风险；</span>
+                    <span style="text-indent: 2em">6.对于周期获取的数据，主要是通过Centos自带的crontab定时抓取数据，每日查看运行状况；</span>
+                    <span style="text-indent: 2em">7.使用多线程和多进程的方式快速批量获取数据。</span>
+                </span>
+
+                <span class="project-title">金融量化回测</span>
+                <span class="tools">开发工具： pycharm + jqdata + pandas + numpy </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    主要的回测工具为聚宽量化数据平台，聚宽平台有比较丰富的量化数据，完全可以通过平台自带的方法获取数据，相应的方法全部存放在jqdata下，通过
+                    from jqdata import *就可以导入，聚宽平台有完善的回测流程，只需要自己设置按天或者按分钟的交易规则，平台就能运算出最终收益和其他的参数。
+                    有时直接通过自建的python方法模拟交易流程，一般用在周期性或者行业性的大背景策略验证。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.因为量化人员只有我一人，所以量化工作由我一人完成，主要是基金经理提出想法，由我来验证策略有效性；<br>
+                    <span style="text-indent: 2em">2.通过jqdata获取的数据一般为二维的DataFrame或者三维的Pane数据，将数据通过清洗和处理得到每日想要交易的股票列表，通过平台自带的
+                        order_value(stock, cash)买入指定股票市值，通过order_target(stock, volume)买入指定股数， 平台会根据交易所在时刻的盘面情况进行模拟买卖，主要是停复牌，价格和整手；</span>
+                    <span style="text-indent: 2em">3.自己编写的回测函数，主要选取的是申万行业指数，通过指数成分的动量分析，动态的操作买入或者卖出，查看净值的收益及风险；</span>
+                    <span style="text-indent: 2em">4.通过程序运行结果，编写回测报告，给基金经理。</span>
+                </span>
+
+                <span class="project-title">医疗馆客户管理系统</span>
+                <span class="tools">开发工具： pycharm + Flask + element </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    老板开了一个医疗保健的诊所，前期客户较少，需要一个客户管理，病例登记，理疗登记的软件，所以设计了一款B/S架构的客户管理系统，前端使用的是element-ui，它是
+                    基于vue的一个开源ui框架，后端使用的是Flask,数据库使用的是mysql, 镜像系统使用的是centos,通过公司的h3c路由器，将nas端口转发
+                    到公司的专有网络上，将阿里云的域名解析到公司的专用线路上。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.使用Flask-SQLalchemy 完成数据库模型的建立， 将模型建立完成之后使用Flask-migrate对数据库进行迁移操作，最后将模型绑定到应用上（一般以app命名）<br>
+                    <span style="text-indent: 2em">2.通过flask 的blueprint编写视图函数，通过视图函数操作ORM的增删改查，完成后端的一些操作，将一些临时字段存入redis，例如，登录的会话信息，挂号等；</span>
+                    <span style="text-indent: 2em">3.前端部分包括前台端和医生端，前台端主要是客户信息的创建，挂号，收费等，医生端的主要内容是接诊和开方，这两端都是通过心跳包的形式从后端获取数据。</span>
+
+                </span>
+
+                <span class="project-title">融易拍APP</span>
+                <span class="tools">开发工具： pycharm + uni-app + requests + Flask </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    通过requests获取阿里拍卖和京东拍卖的拍卖信息，将数据暴露到自己的app上，然后用户看到关注的标的信息，会主动联系客服人员，自此建立了一个客户和公司的沟通渠道。其中少量的分享页面使用的是uni-app做的，
+                    它的优点是跨端自适应，使用效果比较好。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.使用python工具破解阿里加签方式，主要是url参数的MD5, 但是实际破解过程难度较大，京东数据相对好获取一些，将房产数据每日下载更新到数据库；<br>
+                    <span style="text-indent: 2em">2.使用flask搭建网站后台，根据抓取的字段编写视图函数，将视图函数API编写请求方式存放入语雀中，供前端人员查看，主要是POST和GET，</span>
+                    <span style="text-indent: 2em">3.依然使用的是flask-sqlalchemy库建立模型，通过模型对用户数据，房产信息等内容进行操作；</span>
+                    <span style="text-indent: 2em">4.给设计到用户关注板块的视图函数添加装饰器，对用户的访问行为进行保存；</span>
+                    <span style="text-indent: 2em">5.用户的临时信息保存入redis, 持久信息保存入mysql;</span>
+                    <span style="text-indent: 2em">6.视图函数管理使用的是flask-manage, 项目运行使用的是gunicorn,它可以动态的管理运行的application, 可以根据设置，开启
+                    不同的worker, 当其中的某个worker因为一些异常情况down掉以后，它会重新开启新的worker。</span>
+                </span>
+
+                <span class="project-title">设备运维</span>
+                <span class="tools">开发工具： 无 </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    因为公司计算机相关人员较少，所以公司关于硬件方面的安装、维修等都是我来完成。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.电脑的配置，采购、维修，网络设备的采购、维修，小鱼易连设备的维修；<br>
+                    <span style="text-indent: 2em">2.公司本地服务器和阿里云服务器的维护，两个服务器都是运行的windows server；</span>
+                    <span style="text-indent: 2em">3.数据备份工具的维护和设置，主要是群晖nas设备，可以自动将指定文件夹的内容备份到有双盘位的nas中，保证数据不会同时丢失，
+                    主要是为了保存数据库的备份文件，但是已有的服务器已经安装系统，无法再设置raid模式，所以购买了nas设备备份用户资料。</span>
+                </span>
+            </div>
+            <!-- <div class="company">
                 <h2>北京多吃水果有限公司（2018年7月 - 2019年2月）</h2>
                 <span class="project-title">去广告app</span>
                 <span class="tools">开发工具： pycharm + Flask </span>
@@ -102,7 +189,7 @@
                     <span style="text-indent: 2em">6.一些io操作都是通过celery框架来实现，</span>
                     <span style="text-indent: 2em">7.书写接口api文档，指定符合RESTful风格url匹配规则。</span>
                 </span>
-            </div>
+            </div> -->
             <div class="company">
                 <h2>石家庄科林电气股份有限公司（2017年8月 - 2018年6月）</h2>
                 <span class="project-title">用电信息云平台</span>
@@ -123,7 +210,23 @@
                     <span style="text-indent: 2em">5.使用Django REST framework，完成数据的序列化操作，</span>
                     <span style="text-indent: 2em">6.书写接口api文档，指定符合RESTful风格url匹配规则。</span>
                 </span>
+
+                <span class="project-title">智能物联网电能表上位机</span>
+                <span class="tools">开发工具： VB </span>
+                <h4 style="margin: 2px auto 2px">项目描述：</h4>
+                <span class="project-intro">
+                    不同省份对智能电表的参数要求不同，研发人员会根据要求修改相应的参数，生产工人完成之后，需要经过多次复检，使用编写好的上位机软件，
+                    可以让生产人员一键完成对电表的复检工作。
+                </span>
+                <h4 style="margin: 2px auto 2px">项目职责：</h4>
+                <span class="project-intro">
+                    1.使用拖拽式的界面绘制工具，编辑可视化界面；<br>
+                    <span style="text-indent: 2em">2.根据电能表国家标准编辑使用到的数据帧，报文的内容包括，起始段 -> 密码段 -> 控制段 -> 数据段 -> 校验段 -> 结束段；</span>
+                    <span style="text-indent: 2em">3.通过读取复检工作人员扫码枪中的条形码，开始操作USB转485、USB转载波、USB转红外通信模块对电能表的通信状况做测试；</span>
+                    <span style="text-indent: 2em">4.通过485模块对电能表的户号、表号、电能表设置进行比对。</span>
+                </span>
             </div>
+
             <div class="company">
                 <h2>北京乔松健康网络科技有限公司（保定）（2016年1月-2017年6月）</h2>
                 <span class="project-title">乔松商城</span>
@@ -194,7 +297,6 @@
             </div>
         </div>
     </div>
-
     <div class="open-source">
         <span class="icon"></span>
         <span class="subtitle">工作项目或作品</span>

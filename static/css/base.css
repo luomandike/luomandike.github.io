@@ -3,6 +3,7 @@ body {
   font-family: 'Times New Roman', 'Microsoft YaHei', serif;
   word-break: break-all;
   background: #525659;
+  /* background: #F1F1F1; */
 }
 .clear-fix {
   clear: both;
@@ -77,6 +78,8 @@ a {
   min-height: 500px;
   background: #FFF;
   margin: 70px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px skyblue;
 }
 .header {
   width: 690px;
@@ -121,7 +124,7 @@ a {
 }
 .pro-skill {
   position: relative;
-  min-height: 275px;
+  min-height: 330px;
 }
 .pro-skill .icon {
   background: url('../image/pro_skill_icon.png') no-repeat;
@@ -132,7 +135,7 @@ a {
 }
 .work-experience {
   position: relative;
-  min-height: 2460px;
+  min-height: 4500px;
 }
 .work-experience .icon {
   background: url('../image/work_experience_icon.png') no-repeat;
